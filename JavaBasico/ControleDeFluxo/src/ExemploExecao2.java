@@ -17,7 +17,7 @@ public class ExemploExecao2 {
         try{
             String texto = null;
             System.out.println(texto.length());
-        }catch(NullPointerException e){
+        }catch(Exception e){
             System.out.println("Erro: Tentativa de acesso a um objeto nulo.");
         }
 
