@@ -13,6 +13,7 @@ public class Repository {
         SQLDataStore sqlData = ds;
         FileDataStore fileData = ds;
 
+        ((NoSQLDataStore) ds).find();
         nosqlData.find();
         sqlData.delete();
         sqlData.save();
