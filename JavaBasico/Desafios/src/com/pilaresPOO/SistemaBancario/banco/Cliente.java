@@ -1,6 +1,4 @@
-package com.pilaresPOO.sistema.banco;
-
-import java.util.ArrayList;
+package com.pilaresPOO.SistemaBancario.banco;
 
 public class Cliente {
     private String nome, cpf;

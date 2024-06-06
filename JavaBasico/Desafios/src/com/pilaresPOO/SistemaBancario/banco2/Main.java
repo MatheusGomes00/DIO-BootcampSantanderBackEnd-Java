@@ -1,4 +1,4 @@
-package com.pilaresPOO.sistema.banco2;
+package com.pilaresPOO.SistemaBancario.banco2;
 
 //import com.pilaresPOO.sistema.banco.Banco;
 

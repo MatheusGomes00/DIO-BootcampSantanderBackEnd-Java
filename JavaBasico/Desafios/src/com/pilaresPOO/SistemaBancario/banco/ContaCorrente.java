@@ -1,4 +1,4 @@
-package com.pilaresPOO.sistema.banco;
+package com.pilaresPOO.SistemaBancario.banco;
 
 public class ContaCorrente extends Conta{
     // private static String limiteSaqueDiario

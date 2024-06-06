@@ -1,4 +1,4 @@
-package com.pilaresPOO.sistema.banco;
+package com.pilaresPOO.SistemaBancario.banco;
 
 public class Main {
     public static void main(String[] args) {

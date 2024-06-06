@@ -1,9 +1,6 @@
-package com.pilaresPOO.sistema.banco;
+package com.pilaresPOO.SistemaBancario.banco;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static com.pilaresPOO.sistema.banco.Banco.NOME_BANCO;
+import static com.pilaresPOO.SistemaBancario.banco.Banco.NOME_BANCO;
 
 public class Conta implements IConta{
     // definição das constante para o número da agencia e

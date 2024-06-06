@@ -1,4 +1,4 @@
-package com.pilaresPOO.sistema.banco;
+package com.pilaresPOO.SistemaBancario.banco;
 
 import java.util.ArrayList;
 import java.util.List;
