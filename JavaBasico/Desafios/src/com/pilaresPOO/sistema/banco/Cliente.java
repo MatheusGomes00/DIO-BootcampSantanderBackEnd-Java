@@ -4,12 +4,10 @@ import java.util.ArrayList;
 
 public class Cliente {
     private String nome, cpf;
-    private ArrayList<Integer> emails;
 
-    public Cliente(String nome, String cpf, ArrayList<Integer> emails) {
+    public Cliente(String nome, String cpf) {
         this.nome = nome;
         this.cpf = cpf;
-        this.emails = emails;
     }
 
     public String getNome() {
@@ -28,20 +26,11 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public ArrayList<Integer> getEmails() {
-        return emails;
-    }
-
-    public void setEmails(ArrayList<Integer> emails) {
-        this.emails = emails;
-    }
-
     @Override
     public String toString() {
-        return "Cliente{" +
-                "nome='" + nome + '\'' +
+        return "{" +
+                "titular='" + nome + '\'' +
                 ", cpf='" + cpf + '\'' +
-                ", emails=" + emails +
                 '}';
     }
 }
