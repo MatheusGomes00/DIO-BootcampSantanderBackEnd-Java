@@ -1,38 +1,66 @@
 package com.pilaresPOO.sistema.banco;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.pilaresPOO.sistema.banco.Banco.NOME_BANCO;
+
 public class Conta implements IConta{
     // definição das constante para o número da agencia e
     // sequencial contador para número da conta
-    // acesso restrito a classe, não recebe interação ou alteração
+    // acesso restrito a classe, não recebe  alteração
     private static final int AGENCIA_PADRAO = 1;
     private static int SEQUENCIAL = 1;
+
 
     // definição dos atributos da classe compartilhado
     // com as filhas, os valores são dinâmicos
     protected int agencia, numero;
     protected  double saldo;
     protected Cliente cliente;
+    protected String nomeBanco;
 
     public Conta(Cliente cliente) {
+        this.nomeBanco = NOME_BANCO;
         this.agencia = Conta.AGENCIA_PADRAO;
         this.numero = SEQUENCIAL++;  // inclementa no número de toda nova conta criada
         this.cliente = cliente;
     }
 
+
+
     // valor fixo, não altera, não precisa de setter
-    public int getAgencia() {return agencia;}
+    public int getAgencia() {return this.agencia;}
     // valor predefinido com implementação fixa, não recebe alteração, não precisa de setter
-    public int getNumero() {return numero;}
+    public int getNumero() {return this.numero;}
     // o saldo não pode ser modificado sem ser pela própria inst
-    public double getSaldo() {return saldo;}
+    public double getSaldo() {return this.saldo;}
 
     @Override
-    public void exibirExtrato() {
-        System.out.printf("Titular: %s\nAgencia: %d\nNumero: %d\nSaldo: %.2f%n",
-                this.cliente.getNome(),
-                this.agencia,
-                this.numero,
-                this.saldo);
+    public String toString() {
+        return cliente +
+                ", numeroConta=" + numero +
+                ", agencia=" + agencia +
+                ", saldo=" + saldo +
+                ", nomeBanco='" + nomeBanco + '\'' +
+                '}';
+    }
+
+    // implementar histórico de transações realizadas
+    @Override
+    public void exibirExtrato() {}
+
+    protected void imprimirMovimentacoes(){
+        System.out.println("===      Movimentações     ===");
+        System.out.printf("""
+                          \s
+                           Titular: %s
+                           Agencia %S       Conta: %s
+
+
+                           Saldo: R$%.2f%n\
+                       \s""",
+                this.cliente.getNome(), this.agencia, this.numero, this.getSaldo());
     }
 
     @Override
