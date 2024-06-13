@@ -3,7 +3,7 @@ package com.pilaresPOO.SistemaBancario.banco;
 import static com.pilaresPOO.SistemaBancario.banco.Banco.NOME_BANCO;
 
 public class Conta implements IConta{
-    // definição das constante para o número da agencia e
+    // definição da constante para o número da agencia e o
     // sequencial contador para número da conta
     // acesso restrito a classe, não recebe  alteração
     private static final int AGENCIA_PADRAO = 1;
